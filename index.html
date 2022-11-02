@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Main Game</title>
+
+    <!--
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser-arcade-physics.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    -->
+    <script src="public/js/phaser.min.js"></script>
+    <script type="text/javascript" src="public/js/easystar.js"></script>
+    <script type="text/javascript" src="public/js/Game.js"></script>
+    <script type="text/javascript" src="public/js/Menu.js"></script>
+    <script type="text/javascript" src="public/js/Pause.js"></script>
+    <script type="text/javascript" src="public/js/Game2.js"></script>
+    <script type="text/javascript" src="public/js/GameFinished.js"></script>
+    <script src="public/js/webfont.js"></script>
+    <link rel="stylesheet" href="public/css/styles.css">
+
+    <script>var config = {
+            title: "Goek Mou",
+            type: Phaser.AUTO,
+            width: 480,
+            height: 270,
+            resolution: window.devicePixelRatio,
+            parent: "game-container",
+            pixelArt: true,
+            //antialias: false,
+            //roundPixels: true,
+            //Ed
+            audio: {
+                disableWebAudio: true
+            },
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
+                //autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            physics: {
+                default: "arcade",
+                arcade: {
+                    //fps: 200,
+                    gravity: { y: 0 }
+                }
+            },
+            scene: [Menu, Game, Game2, Pause, GameFinished],
+            //audio: {
+            //        disableWebAudio: true
+        };
+        //==========================================Font loder ===============================
+        WebFont.load({
+            custom: {
+                families: ['bitmapFont']
+            }
+        });
+
+
+        var game = new Phaser.Game(config);</script>
+
+</head>
+<body>
+    <div id="game-container"></div>
+</body>
+</html>
